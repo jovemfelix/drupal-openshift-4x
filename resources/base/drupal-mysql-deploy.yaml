@@ -21,7 +21,7 @@ spec:
             claimName: drupal-mysql-pvc
       containers:
       - name: mysql
-        image: mysql:5.7
+        image: mysql:8.4
         volumeMounts:
           - mountPath: /var/lib/mysql
             name: drupal-mysql-vol
@@ -32,3 +32,7 @@ spec:
               value: root_password
             - name: MYSQL_DATABASE
               value: drupal-database
+            - name: MYSQL_USER
+              value: drupal-user
+            - name: MYSQL_PASSWORD
+              value: drupal-pass

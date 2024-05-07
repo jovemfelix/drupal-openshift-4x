@@ -19,6 +19,6 @@ spec:
       serviceAccountName: sa-with-anyuid
       containers:
       - name: drupal
-        image: drupal:8.6
+        image: drupal:10.2.6-php8.2-apache-bookworm
         ports:
         - containerPort: 80
