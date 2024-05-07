@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: drupal
+  labels:
+    app: drupal
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: drupal
+  template:
+    metadata:
+      labels:
+        app: drupal
+    spec:
+      serviceAccount: sa-with-anyuid
+      serviceAccountName: sa-with-anyuid
+      containers:
+      - name: drupal
+        image: drupal:8.6
+        ports:
+        - containerPort: 80

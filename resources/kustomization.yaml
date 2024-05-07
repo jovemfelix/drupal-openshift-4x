@@ -1,0 +1,13 @@
+resources:
+# database
+- drupal-mysql-pvc.yaml
+- drupal-mysql-deploy.yaml
+- drupal-mysql-svc.yaml
+# cms-permissions
+- drupal-permission-sa.yaml
+- drupal-permission-role.yaml
+- drupal-permission-rolebinding.yaml
+# cms
+- drupal-deploy.yaml
+- drupal-svc.yaml
+- drupal-route.yaml
