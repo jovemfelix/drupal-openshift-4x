@@ -1,4 +1,8 @@
+kind: Kustomization
+namespace: drupal-test
 resources:
+# namespace
+- drupal-ns.yaml
 # database
 - drupal-mysql-pvc.yaml
 - drupal-mysql-deploy.yaml

@@ -6,7 +6,7 @@ metadata:
   labels:
     app: drupal
   name: drupal
-  namespace: drupal-dev
+  namespace: drupal-hmg
 spec:
   port:
     targetPort: 80

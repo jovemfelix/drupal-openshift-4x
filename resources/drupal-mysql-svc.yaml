@@ -4,7 +4,7 @@ metadata:
   labels:
     app: mysql
   name: drupal-mysql
-  namespace: drupal-dev
+  namespace: drupal-hmg
 spec:
   internalTrafficPolicy: Cluster
   ipFamilies:
