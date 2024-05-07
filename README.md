@@ -11,8 +11,6 @@ oc apply -k resources/overlays/dev
 oc delete -k resources/overlays/dev
 ```
 
-0/1 nodes are available: pod has unbound immediate PersistentVolumeClaims. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..
-
 # Documents
 ![Language](doc/00-drupal-start-page.png "Escolher a Linguagem")
 
@@ -39,6 +37,10 @@ oc delete -k resources/overlays/dev
 
 
 # Troubleshooting
+```shell
+0/1 nodes are available: pod has unbound immediate PersistentVolumeClaims. preemption: 0/1 nodes are available: 1 Preemption is not helpful for scheduling..
+```
+
 ```shell
 Warning: would violate PodSecurity "restricted:v1.24": allowPrivilegeEscalation != false (container "drupal" must set securityContext.allowPrivilegeEscalation=false), unrestricted capabilities (container "drupal" must set securityContext.capabilities.drop=["ALL"]), runAsNonRoot != true (pod or container "drupal" must set securityContext.runAsNonRoot=true), runAsUser=0 (container "drupal" must not set runAsUser=0), seccompProfile (pod or container "drupal" must set securityContext.seccompProfile.type to "RuntimeDefault" or "Localhost")
 ```
