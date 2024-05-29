@@ -19,6 +19,6 @@ spec:
       serviceAccountName: sa-with-anyuid
       containers:
       - name: drupal
-        image: drupal-padrao:latest
+        image: 'image-registry.openshift-image-registry.svc:5000/institucional-drupal-dev/drupal-padrao:latest'
         ports:
         - containerPort: 80
